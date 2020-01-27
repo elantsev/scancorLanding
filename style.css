@@ -47,10 +47,10 @@ body > header {
   body > header > section > * {
     padding: 0.5rem;
   }
-    body > header > section.hideOnScroll > img {
+    body > header > section#hideOnScroll > img {
       margin-right: auto;
     }
-    body > header > section.showOnScroll > p {
+    body > header > section#showOnScroll > p {
       margin-right: auto;
       margin-left: 3.4rem;
       font-weight: bold;
@@ -58,6 +58,12 @@ body > header {
       line-height: 4rem;
       letter-spacing: 0.75px;
       color: #333333;
+    }
+    #hideOnScroll{
+      display: none;
+    }
+    #showOnScroll{
+      height: 82px;
     }
 .enter-btn {
   font-weight: 500;
@@ -75,13 +81,14 @@ body > header {
   text-transform: uppercase;
   text-decoration: none;
   color: #000;
+
 }
 .ru-btn.active,
 .en-btn.active {
   border: 2px solid #4889f1;
 }
 
-.showOnScroll > .try-free-btn {
+#showOnScroll > .try-free-btn {
   margin-left: 3.6rem;
 }
 
@@ -144,6 +151,7 @@ h1 {
     text-transform: uppercase;
     color: #9a99a2;
     margin: 0;
+    margin-bottom: 2rem;
   }
 
 .advantages-list {
