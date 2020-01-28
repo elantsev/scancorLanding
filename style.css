@@ -20,18 +20,19 @@ html {
   font-style: normal;
 }
 
-/* body>header>section, 
-body>main>section, 
-body>footer>*{
+body > header > section,
+body > main > section,
+body > footer > * {
   max-width: 1200px;
-}  */
+  width: 100%;
+  margin: auto;
+  padding: 0 10px;
+}
 
 body {
   font-family: HelveticaNeueCyr, sans-serif;
   overflow-y: auto;
   overflow-x: hidden;
-  display: flex;
-  flex-direction: column;
   height: 100%;
   margin: 0;
 }
@@ -41,7 +42,6 @@ body > header {
   top: 0;
   z-index: 20;
   background: #fff;
-  padding: 0 10%;
 }
 body > header > section {
   display: flex;
@@ -111,7 +111,6 @@ section.main {
   align-items: flex-start;
   background: url("./assets/bg.svg") no-repeat right top,
     linear-gradient(#f2f2f2 0%, #f2f2f2 60%, #fff 60%, #fff 100%);
-  padding: 0 10%;
 }
 section.main > header {
   width: 466px;
@@ -198,7 +197,6 @@ section.main > .slider > img {
 }
 
 .advantages-list {
-  padding: 0 10%;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
@@ -245,16 +243,15 @@ footer {
   flex-direction: column;
   align-items: flex-start;
   color: #fff;
-  padding: 0 10%;
 }
-footer > header {
+footer  header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   margin: 3.8rem 0 1rem;
 }
-footer > header > h2 {
+footer  header > h2 {
   font-weight: 900;
   font-size: 2.4rem;
   line-height: 4.8rem;
@@ -263,7 +260,7 @@ footer > header > h2 {
   color: #ffffff;
 }
 
-footer > section.contacts {
+footer  section.contacts {
   width: 600px;
   font-size: 1.2rem;
   line-height: 1.2rem;
@@ -274,22 +271,22 @@ footer > section.contacts {
   justify-content: space-around;
   height: 100px;
 }
-footer > section.contacts > p {
+footer  section.contacts > p {
   display: flex;
   align-items: center;
   width: 200px;
 }
-footer > section.contacts > p > svg {
+footer  section.contacts > p > svg {
   margin-right: 3rem;
 }
-footer > section.contacts > p > a {
+footer  section.contacts > p > a {
   color: #fff;
   text-decoration: none;
 }
-footer > section.contacts > .socials > a:not(:last-of-type) {
+footer  section.contacts > .socials > a:not(:last-of-type) {
   margin-right: 2rem;
 }
-footer > section.copyright {
+footer  section.copyright {
   font-size: 1.2rem;
   line-height: 1.2rem;
   letter-spacing: 0.05rem;
