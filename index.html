@@ -50,9 +50,16 @@
       </header>
       <a href="#" class="try-free-btn">попробовать бесплатно</a>
       <div class="slider">
-          <div class="btnLeft"></div>
-          <div class="btnRight"></div>
-        <img id="slider" src="./assets/slides/slide1.png8" alt="">
+        <div class="btnLeft"></div>
+        <div class="btnRight"></div>
+        <img src="./assets/slides/slide1.png8" alt="bar" 
+                  srcset="./assets/slides/slide1_sm.png8  800w,
+                          ./assets/slides/slide1.png8     1024w,
+                          ./assets/slides/slide1@2x.png8  2048w"
+                  sizes=" (max-width: 800px) 800px,
+                          (max-width: 1024px) 1024px,
+                          (max-width: 2048px) 2048px" />
+        <!-- <img id="slider" src="./assets/slides/slide1.png8" alt=""> -->
       </div>
     </section>
 
@@ -177,7 +184,6 @@
   </footer>
 
   <script src="/scripts/main.js"></script>
-  <script type="text/javascript" src="/scripts/retina.js"></script>
 </body>
 
 </html>
