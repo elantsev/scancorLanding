@@ -296,6 +296,13 @@ footer .socials svg:hover {
   width: fit-content;
 }
 
+@media (max-width: 700px) {
+  footer > section.contacts {
+    width: auto;
+    height: auto;
+  }
+}
+
 /* slider******************************************************************* */
 .slider {
   position: relative;
