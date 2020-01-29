@@ -98,10 +98,24 @@ body > header > section#showOnScroll > p {
 #showOnScroll > .try-free-btn {
   margin-left: 3.6rem;
 }
-@media (max-width: 1200px) {
+@media (max-width: 950px) {
+  body > header > section img {
+    width: 49px;
+  }
   body > header > section#showOnScroll > p {
     display: none;
   }
+  body > header .try-free-btn {
+    font-size: 1rem;
+    padding: 0.6rem 0.9rem;
+    height: 3rem;
+  }
+  #showOnScroll > .try-free-btn {
+    margin-left: 1.6rem;
+  }
+  #hideOnScroll .enter-btn {
+  margin-left: 2.1rem;
+}
 }
 
 /* main-section******************************************************* */
@@ -166,7 +180,7 @@ section.main > .slider > img {
 
 @media (max-width: 1200px) {
   section.main {
-    background: url("./assets/bg.svg") no-repeat right 25rem,
+    background: url("./assets/bg.svg") no-repeat right 12rem,
       linear-gradient(#f2f2f2 0%, #f2f2f2 60%, #fff 60%, #fff 100%);
     background-size: 80%;
   }
@@ -274,7 +288,7 @@ footer header {
   justify-content: space-between;
   align-items: center;
   width: 100%;
-  margin: 3.8rem 0 1rem;
+  margin: 4.5rem 0 1rem;
 }
 footer header > h2 {
   font-weight: 900;
@@ -283,6 +297,7 @@ footer header > h2 {
   letter-spacing: 0.75px;
   text-transform: uppercase;
   color: #ffffff;
+  margin: 0;
 }
 
 footer section.contacts {
@@ -290,16 +305,17 @@ footer section.contacts {
   font-size: 1.2rem;
   line-height: 1.2rem;
   letter-spacing: 0.05rem;
-  margin: 7rem 0 4rem;
+  margin: 5.6rem 0 4rem;
   display: flex;
   flex-flow: column wrap;
   justify-content: space-around;
-  height: 100px;
+  height: 120px;
 }
 footer section.contacts > p {
   display: flex;
   align-items: center;
   width: 200px;
+  font-size: 1.4rem;
 }
 footer section.contacts > p > svg {
   margin-right: 3rem;
@@ -321,6 +337,33 @@ footer .socials svg:hover {
   stroke: #4889f1;
 }
 
+@media (max-width: 700px) {
+  footer header {
+    margin: 4.5rem 0 2.1rem;
+  }
+  footer header > h2 {
+    font-size: 1.4rem;
+    line-height: 2.8rem;
+  }
+  footer section.contacts {
+    width: auto;
+    height: auto;
+    margin: 5rem 0 4rem;
+  }
+  footer section.contacts p:last-of-type {
+    margin-top: 30px;
+  }
+
+  footer section.contacts .socials {
+    margin-top: 2.2rem;
+  }
+  footer section.contacts .socials svg {
+    width: 27px;
+    margin-bottom: 1.6rem;
+  }
+}
+
+/* try-free-btn******************************************************************* */
 .try-free-btn {
   border: 2px solid #4889f1;
   border-radius: 2.1rem;
@@ -342,24 +385,6 @@ footer .socials svg:hover {
     font: normal 600 1.4rem/1.6rem Segoe UI;
   }
 }
-@media (max-width: 700px) {
-  footer section.contacts {
-    width: auto;
-    height: auto;
-  }
-  footer section.contacts p:last-of-type {
-    margin-top: 30px;
-  }
-
-  footer section.contacts .socials {
-    margin-top: 2.2rem;
-  }
-  footer section.contacts .socials svg {
-    width: 27px;
-    margin-bottom: 1.6rem;
-  }
-}
-
 /* slider******************************************************************* */
 .slider {
   position: relative;
