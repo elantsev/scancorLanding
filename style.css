@@ -49,15 +49,13 @@ body > header > section {
   justify-content: flex-end;
   margin: auto;
   min-height: 82px;
+  box-sizing: padding-box;
 }
 body > header > section > * {
   padding: 0.5rem;
 }
 body > header > section#hideOnScroll > img {
   margin-right: auto;
-}
-body > header > section#showOnScroll {
-  border-bottom: 1px solid #c4c4c4;
 }
 body > header > section#showOnScroll > p {
   margin: 0;
@@ -81,6 +79,14 @@ body > header > section#showOnScroll > p {
   letter-spacing: 0.75px;
   color: #9a99a2;
   margin-left: 3.6rem;
+  transition: 0.2s;
+}
+.enter-btn:hover {
+  color: #000000;
+  text-decoration: none;
+}
+.enter-btn:active {
+  font-weight: 600;
 }
 .ru-btn,
 .en-btn {
@@ -90,6 +96,18 @@ body > header > section#showOnScroll > p {
   text-transform: uppercase;
   text-decoration: none;
   color: #000;
+  transition: 0.2s;
+  border: 2px solid transparent;
+}
+.ru-btn:hover,
+.en-btn:hover {
+  background: #4889f1;
+  color: #fff;
+}
+.ru-btn:active,
+.en-btn:active {
+  background: #3667b6;
+  border: 2px solid #3667b6 !important;
 }
 .ru-btn.active,
 .en-btn.active {
@@ -383,6 +401,15 @@ footer .socials svg:hover {
   justify-content: flex-start;
   align-items: center;
   width: fit-content;
+  transition: 0.2s;
+}
+.try-free-btn:hover {
+  background: #4889f1;
+  color: #fff;
+}
+.try-free-btn:active {
+  background: #3667b6;
+  border-color: #3667b6;
 }
 @media (max-width: 700px) {
   .try-free-btn {
