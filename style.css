@@ -56,7 +56,11 @@ body > header > section > * {
 body > header > section#hideOnScroll > img {
   margin-right: auto;
 }
+body > header > section#showOnScroll {
+  border-bottom: 1px solid #c4c4c4;
+}
 body > header > section#showOnScroll > p {
+  margin: 0;
   margin-left: 3.4rem;
   font-weight: bold;
   font-size: 2rem;
@@ -66,9 +70,6 @@ body > header > section#showOnScroll > p {
 }
 #hideOnScroll {
   display: none;
-}
-#showOnScroll {
-  height: 82px;
 }
 #showOnScroll .enter-btn {
   margin-left: auto;
@@ -99,6 +100,9 @@ body > header > section#showOnScroll > p {
   margin-left: 3.6rem;
 }
 @media (max-width: 950px) {
+  body > header > section {
+    min-height: 74px;
+  }
   body > header > section img {
     width: 49px;
   }
@@ -114,8 +118,8 @@ body > header > section#showOnScroll > p {
     margin-left: 1.6rem;
   }
   #hideOnScroll .enter-btn {
-  margin-left: 2.1rem;
-}
+    margin-left: 2.1rem;
+  }
 }
 
 /* main-section******************************************************* */
