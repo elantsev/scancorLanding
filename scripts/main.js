@@ -36,9 +36,10 @@ function scrollFunction () {
 
         var i = 0;
         var x = (images.length) - 1;
-        var int = 3000;
+        var int = 500;
 
-        interval = setInterval(showNext, int);
+
+        var interval = setInterval(showNext, int);
 
         var elements = {
             sliderContainer: document.querySelector('.slider'),
@@ -80,11 +81,6 @@ function scrollFunction () {
 
         }
 
-        var initialize = (function () {
-            attachEvents();
-            changeImg(i);
-        })();
-
         var showPrevious = function () {
             (i <= 0) ? i = images.length - 1 : i--;
             changeImg(i);
@@ -95,8 +91,11 @@ function scrollFunction () {
             changeImg(i);
         };
 
+        var initialize = (function () {
+            attachEvents();
+            startInterval()
+        })();
     };
 
     slider();
-
 })();
