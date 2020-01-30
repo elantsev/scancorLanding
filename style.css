@@ -368,7 +368,7 @@ footer section.copyright {
   letter-spacing: 0.05rem;
   margin-bottom: 4rem;
 }
-footer .contacts a svg {
+footer .contacts svg {
   transition: 0.2s;
 }
 footer .contacts a:hover svg {
