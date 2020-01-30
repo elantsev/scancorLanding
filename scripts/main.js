@@ -22,15 +22,15 @@ function scrollFunction () {
         var images = [
             {
                 src: "./assets/slides/slide1.png",
-                srcset: "./assets/slides/slide1_sm.png  800w, ./assets/slides/slide1.png   1024w,  ./assets/slides/slide1@2x.png  2x",
+                srcset: "./assets/slides/slide1_sm.png  800w, ./assets/slides/slide1.png   1024w,  ./assets/slides/slide1@2x.png  2048w",
             },
             {
                 src: "./assets/slides/slide2.png",
-                srcset: "./assets/slides/slide2_sm.png  800w, ./assets/slides/slide2.png   1024w,  ./assets/slides/slide2@2x.png  2x",
+                srcset: "./assets/slides/slide2_sm.png  800w, ./assets/slides/slide2.png   1024w,  ./assets/slides/slide2@2x.png  2048w",
             },
             {
                 src: "./assets/slides/slide3.png",
-                srcset: "./assets/slides/slide3_sm.png  800w, ./assets/slides/slide3.png   1024w,  ./assets/slides/slide3@2x.png  2x",
+                srcset: "./assets/slides/slide3_sm.png  800w, ./assets/slides/slide3.png   1024w,  ./assets/slides/slide3@2x.png  2048w",
             }
         ];
 
