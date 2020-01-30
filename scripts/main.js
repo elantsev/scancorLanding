@@ -36,7 +36,7 @@ function scrollFunction () {
 
         var i = 0;
         var x = (images.length) - 1;
-        var int = 500;
+        var int = 3000;
 
 
         var interval = setInterval(showNext, int);
