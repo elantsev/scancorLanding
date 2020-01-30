@@ -347,6 +347,8 @@ footer section.contacts {
 footer section.contacts > p {
   display: flex;
   align-items: center;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
   width: 200px;
   font-size: 1.4rem;
 }
@@ -371,6 +373,10 @@ footer .contacts a svg {
 }
 footer .contacts a:hover svg {
   fill: #4889f1;
+}
+a:hover + svg {
+  fill:#4889f1;
+  stroke: #4889f1;
 }
 
 @media (max-width: 700px) {

@@ -41,6 +41,7 @@ function scrollFunction () {
         interval = setInterval(showNext, int);
 
         var elements = {
+            sliderContainer: document.querySelector('.slider'),
             slider: document.querySelector('#slider'),
             btn: {
                 left: document.querySelector('.btnLeft'),
@@ -60,14 +61,8 @@ function scrollFunction () {
         var attachEvents = function () {
             elements.btn.left.onclick = function () { showPrevious(); };
             elements.btn.right.onclick = function () { showNext(); };
-            elements.btn.left.addEventListener("mouseenter", stopInterval);
-            elements.btn.left.addEventListener("mouseleave", startInterval);
-            elements.btn.right.addEventListener("mouseenter", stopInterval);
-            elements.btn.right.addEventListener("mouseleave", startInterval);
-            elements.slider.addEventListener("mouseenter", stopInterval);
-            elements.slider.addEventListener("mouseleave", startInterval);
-            elements.dots.addEventListener("mouseenter", stopInterval);
-            elements.dots.addEventListener("mouseleave", startInterval);
+            elements.sliderContainer.addEventListener("mouseenter", stopInterval);
+            elements.sliderContainer.addEventListener("mouseleave", startInterval);
             elements.dots.addEventListener("click", (e) => {
                 if (e.target.className === 'dot') {
                     i = +e.target.dataset.index
