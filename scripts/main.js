@@ -12,11 +12,3 @@ function scrollFunction () {
         document.querySelector('body>header').style.borderBottom = "none"
     }
 }
-
-
-var slider = tns({
-    container: '.my-slider',
-    items: 3,
-    slideBy: 'page',
-    autoplay: true
-});
