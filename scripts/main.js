@@ -94,6 +94,7 @@ function scrollFunction () {
         var initialize = (function () {
             attachEvents();
             startInterval()
+            changeImg(0)
         })();
     };
 
