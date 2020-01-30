@@ -36,7 +36,7 @@ function scrollFunction () {
 
         var i = 0;
         var x = (images.length) - 1;
-        var int = 3500;
+        var int = 3000;
 
         interval = setInterval(showNext, int);
 
@@ -45,7 +45,8 @@ function scrollFunction () {
             btn: {
                 left: document.querySelector('.btnLeft'),
                 right: document.querySelector('.btnRight')
-            }
+            },
+            dots: document.querySelector('.dots'),
         }
 
         var startInterval = function () {
@@ -65,11 +66,23 @@ function scrollFunction () {
             elements.btn.right.addEventListener("mouseleave", startInterval);
             elements.slider.addEventListener("mouseenter", stopInterval);
             elements.slider.addEventListener("mouseleave", startInterval);
+            elements.dots.addEventListener("mouseenter", stopInterval);
+            elements.dots.addEventListener("mouseleave", startInterval);
+            elements.dots.addEventListener("click", (e) => {
+                if (e.target.className === 'dot') {
+                    i = +e.target.dataset.index
+                    changeImg(i)
+                }
+            });
         };
 
-        var changeImg = function () {
+        var changeImg = function (i) {
             elements.slider.src = images[i].src;
             elements.slider.srcset = images[i].srcset;
+            elements.dots.innerHTML = images.map((_, index) =>
+                `<div data-index="${index}" class="dot${index === i ? ' active' : ''}"></div>`
+            ).join('')
+
         }
 
         var initialize = (function () {

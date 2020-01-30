@@ -355,8 +355,8 @@ footer section.copyright {
   letter-spacing: 0.05rem;
   margin-bottom: 4rem;
 }
-footer .socials svg:hover {
-  stroke: #4889f1;
+footer .contacts a:hover svg {
+  fill: #4889f1;
 }
 
 @media (max-width: 700px) {
@@ -501,4 +501,21 @@ footer .socials svg:hover {
 .slider .btnRight:hover:before {
   -webkit-box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.6);
   box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.4);
+}
+
+.slider .dots {
+  display: flex;
+  justify-content: center;
+}
+.slider .dot {
+  height: 1rem;
+  width: 1rem;
+  border-radius: 50%;
+  background: rgba(72, 137, 241, 0.44);
+  margin: 2.3rem 1rem 0;
+  cursor: pointer;
+}
+.slider .dot.active,
+.slider .dot:hover {
+  background: #4889f1;
 }
