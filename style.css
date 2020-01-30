@@ -19,6 +19,14 @@ html {
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: HelveticaNeueCyr-Bold;
+  src: local("HelveticaNeueCyr-Bold"),
+    url("./assets/fonts/HelveticaNeueCyr-Bold.woff2") format("woff2"),
+    url("./assets/fonts/HelveticaNeueCyr-Bold.woff") format("woff");
+  /* font-weight: normal;
+  font-style: normal; */
+}
 
 body > header > section,
 body > main > section > *,
@@ -153,6 +161,7 @@ section.main > header > p {
   width: 466px;
 }
 h1 {
+  font-family: HelveticaNeueCyr-Bold, sans-serif;
   font-weight: 900;
   font-size: 3.2rem;
   line-height: 4.8rem;
@@ -178,6 +187,7 @@ section.main > .slider > img {
 }
 #slider {
   box-shadow: 0px 1px 3rem rgba(0, 0, 0, 0.2);
+  height: 65rem;
 }
 .slider::before {
   content: "";
@@ -305,14 +315,15 @@ footer {
   align-items: flex-start;
   color: #fff;
 }
-footer header {
+footer .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
   margin: 4.5rem 0 1rem;
 }
-footer header > h2 {
+footer .header > h2 {
+  /* font-family: HelveticaNeueCyr-Bold, sans-serif; */
   font-weight: 900;
   font-size: 2.4rem;
   line-height: 4.8rem;
@@ -363,10 +374,10 @@ footer .contacts a:hover svg {
 }
 
 @media (max-width: 700px) {
-  footer header {
+  footer .header {
     margin: 4.5rem 0 2.1rem;
   }
-  footer header > h2 {
+  footer .header > h2 {
     font-size: 1.4rem;
     line-height: 2.8rem;
   }
@@ -403,7 +414,7 @@ footer .contacts a:hover svg {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  width: fit-content;
+  width: max-content;
   transition: 0.2s;
 }
 .try-free-btn:hover {
