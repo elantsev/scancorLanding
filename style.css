@@ -5,27 +5,17 @@ html {
   font-size: 10px;
 }
 
-/* @media (max-width: 630px) {
-  html {
-    font-size: 8px;
-  }
-} */
-
 @font-face {
-  font-family: HelveticaNeueCyr;
+  font-family: HelveticaNeueCyr-Roman;
   src: local("HelveticaNeueCyr-Roman"),
     url("./assets/fonts/HelveticaNeueCyr-Roman.woff2") format("woff2"),
     url("./assets/fonts/HelveticaNeueCyr-Roman.woff") format("woff");
-  font-weight: normal;
-  font-style: normal;
 }
 @font-face {
   font-family: HelveticaNeueCyr-Bold;
   src: local("HelveticaNeueCyr-Bold"),
     url("./assets/fonts/HelveticaNeueCyr-Bold.woff2") format("woff2"),
     url("./assets/fonts/HelveticaNeueCyr-Bold.woff") format("woff");
-  /* font-weight: normal;
-  font-style: normal; */
 }
 
 body > header > section,
@@ -38,7 +28,7 @@ body > footer > * {
 }
 
 body {
-  font-family: HelveticaNeueCyr, sans-serif;
+  font-family: HelveticaNeueCyr-Roman, sans-serif;
   overflow-y: auto;
   overflow-x: hidden;
   height: 100%;
@@ -179,15 +169,18 @@ section.main > header > p {
   margin-top: 14px;
 }
 
-/* section.main > .slider {
-  width: 100%;
-  margin: 8.1rem auto 2rem;
+/* section.main > .my-slider******************************************************************* */
+
+section.main .my-slider {
+  /* width: 100%; 
+   margin: 8.1rem auto 2rem; */
 }
-section.main > .slider > img {
+/* section.main  .tns-inner {
   width: 100%;
-} */
-/* #slider {
   box-shadow: 0px 1px 3rem rgba(0, 0, 0, 0.2);
+} */
+
+/* #slider {
   height: 65rem;
 }
 .slider::before {
@@ -324,7 +317,7 @@ footer .header {
   margin: 4.5rem 0 1rem;
 }
 footer .header > h2 {
-  /* font-family: HelveticaNeueCyr-Bold, sans-serif; */
+  font-family: HelveticaNeueCyr-Bold, sans-serif;
   font-weight: 900;
   font-size: 2.4rem;
   line-height: 4.8rem;
@@ -376,7 +369,7 @@ footer .contacts a:hover svg {
   fill: #4889f1;
 }
 a:hover + svg {
-  fill:#4889f1;
+  fill: #4889f1;
   stroke: #4889f1;
 }
 
@@ -411,7 +404,7 @@ a:hover + svg {
   border: 2px solid #4889f1;
   border-radius: 2.1rem;
   white-space: nowrap;
-  font: normal 600 1.8rem/1.6rem Segoe UI;
+  font: normal 600 1.8rem/1.6rem HelveticaNeueCyr-Roman;
   letter-spacing: 0.75px;
   text-transform: uppercase;
   text-decoration: none;
@@ -434,7 +427,6 @@ a:hover + svg {
 }
 @media (max-width: 700px) {
   .try-free-btn {
-    font: normal 600 1.4rem/1.6rem Segoe UI;
+    font: normal 600 1.4rem/1.6rem HelveticaNeueCyr-Roman;
   }
 }
-/* slider******************************************************************* */

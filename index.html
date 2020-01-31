@@ -50,28 +50,24 @@
         </p>
         <a href="#" class="try-free-btn">попробовать бесплатно</a>
       </header>
-      <!-- <div class="slider">
-        <div class="btnLeft"></div>
-        <div class="btnRight"></div>
-        <img src="./assets/slides/slide1.png" alt="image" id="slider" srcset="./assets/slides/slide1_sm.png  800w,
-                          ./assets/slides/slide1.png     1024w,
-                          ./assets/slides/slide1@2x.png  2048w" sizes="100vw" />
-        <div class="dots"> </div>
-      </div> -->
-      <ul class="my-slider">
-        <li> <img src="./assets/slides/slide1.png" alt="image" id="slider" srcset="./assets/slides/slide1_sm.png  800w,
+
+      <div class="my-slider">
+        <div>
+          <img src="./assets/slides/slide1.png" alt="image" id="slider" srcset="./assets/slides/slide1_sm.png  800w,
                                   ./assets/slides/slide1.png     1024w,
                                   ./assets/slides/slide1@2x.png  2048w" sizes="100vw" />
-        </li>
-        <li><img src="./assets/slides/slide2.png" alt="image" id="slider" srcset="./assets/slides/slide2_sm.png  800w,
+        </div>
+        <div>
+          <img src="./assets/slides/slide2.png" alt="image" id="slider" srcset="./assets/slides/slide2_sm.png  800w,
                                   ./assets/slides/slide2.png     1024w,
                                   ./assets/slides/slide2@2x.png  2048w" sizes="100vw" />
-        </li>
-        <li> <img src="./assets/slides/slide3.png" alt="image" id="slider" srcset="./assets/slides/slide3_sm.png  800w,
+        </div>
+        <div>
+          <img src="./assets/slides/slide3.png" alt="image" id="slider" srcset="./assets/slides/slide3_sm.png  800w,
                                   ./assets/slides/slide3.png     1024w,
                                   ./assets/slides/slide3@2x.png  2048w" sizes="100vw" />
-        </li>
-      </ul>
+        </div>
+      </div>
     </section>
 
     <section class="advantages">
@@ -200,14 +196,16 @@
 
   <script src="/scripts/main.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
-<script>
-  var slider = tns({
-    container: '.my-slider',
-    items: 1,
-    slideBy: 'page',
-    autoplay: true
-  });
-</script>
+  <script>
+    var slider = tns({
+      container: '.my-slider',
+      items: 1,
+      slideBy: 'page',
+      autoplay: true,
+      autoplayHoverPause: true,
+      mouseDrag: true
+    });
+  </script>
 </body>
 
 </html>
