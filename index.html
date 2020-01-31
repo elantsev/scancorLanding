@@ -103,6 +103,18 @@
       margin: 0;
       padding: 0 .5rem;
     }
+
+    .tns-nav {
+      position: absolute;
+      bottom: 0;
+      right: 50%;
+      transform: translateX(50%);
+      z-index: 100;
+    }
+
+    .tns-nav-active {
+      background: #000;
+    }
   </style>
 
 
@@ -331,7 +343,7 @@
       loop: true,
       items: 1,
       slideBy: 'page',
-      nav: false,
+      // nav: false,
       autoplay: true,
       speed: 400,
       autoplayButtonOutput: false,

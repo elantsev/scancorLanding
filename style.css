@@ -170,7 +170,7 @@ section.main > header > p {
 }
 
 /* section.main > .my-slider******************************************************************* */
-.tns-outer{
+/* .tns-outer{
   position: relative;
 }
 .tns-slider{
@@ -200,7 +200,7 @@ section.main > header > p {
 
 .tns-item{
   width: 100%;
-}
+} */
 /* #slider {
   height: 65rem;
 }
