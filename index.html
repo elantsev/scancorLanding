@@ -20,6 +20,92 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/tiny-slider.css">
+  <style>
+    .slider-container {
+      max-width: 1000px;
+      padding: 2rem 3rem;
+      background: #e6e6e6;
+      margin: 2rem auto 0 auto;
+      overflow: hidden;
+      border-radius: 5px;
+      position: relative;
+    }
+
+    img {
+      display: inline-block;
+      vertical-align: top;
+      max-width: 100%;
+    }
+
+    .my-slider {
+      position: relative;
+    }
+
+    .slider-item {
+      background: grey;
+      border-right: 2px solid #333;
+      padding: 1.5rem .75rem;
+      position: relative;
+
+    }
+
+    .slider-item:hover {
+      cursor: pointer;
+    }
+
+    .controls {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      position: absolute;
+      left: 0;
+      background: #333;
+      width: 100%;
+      top: 50%;
+      transform: translateY(-50%);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .controls:focus {
+      outline: none;
+    }
+
+    .controls li:hover {
+      cursor: pointer;
+    }
+
+
+    .card {
+      text-align: center;
+      margin: 0 auto;
+      max-width: 200px;
+      color: #333;
+      background: white;
+      border-radius: 5px;
+      padding-bottom: .75rem;
+      font-family: sans-serif;
+      overflow: hidden;
+      box-shadow: 2px 2px rgba(black, .3);
+      position: relative;
+    }
+
+    .card img {
+      margin-bottom: .25rem;
+    }
+
+    .card h2 {
+      margin: 0 0 .25rem;
+    }
+
+    .card p {
+      margin: 0;
+      padding: 0 .5rem;
+    }
+  </style>
+
+
 </head>
 
 <body>
@@ -51,7 +137,7 @@
         <a href="#" class="try-free-btn">попробовать бесплатно</a>
       </header>
 
-      <div class="my-slider">
+      <!-- <div class="my-slider">
         <div>
           <img src="./assets/slides/slide1.png" alt="image" id="slider" srcset="./assets/slides/slide1_sm.png  800w,
                                   ./assets/slides/slide1.png     1024w,
@@ -66,6 +152,36 @@
           <img src="./assets/slides/slide3.png" alt="image" id="slider" srcset="./assets/slides/slide3_sm.png  800w,
                                   ./assets/slides/slide3.png     1024w,
                                   ./assets/slides/slide3@2x.png  2048w" sizes="100vw" />
+        </div>
+      </div> -->
+
+      <div class="slider-container">
+        <ul class="controls" id="customize-controls" aria-label="Carousel Navigation" tabindex="0">
+          <li class="prev" data-controls="prev" aria-controls="customize" tabindex="-1">
+            <i class="fas fa-angle-left fa-5x">prev</i>
+          </li>
+          <li class="next" data-controls="next" aria-controls="customize" tabindex="-1">
+            <i class="fas fa-angle-right fa-5x">next</i>
+          </li>
+        </ul>
+        <div class="my-slider">
+          <div class="slider-item">
+            <img src="./assets/slides/slide1.png" alt="image" id="slider" srcset="./assets/slides/slide1_sm.png  800w,
+                                              ./assets/slides/slide1.png     1024w,
+                                              ./assets/slides/slide1@2x.png  2048w" sizes="100vw" />
+          </div>
+
+          <div class="slider-item">
+            <img src="./assets/slides/slide2.png" alt="image" id="slider" srcset="./assets/slides/slide2_sm.png  800w,
+                                  ./assets/slides/slide2.png     1024w,
+                                  ./assets/slides/slide2@2x.png  2048w" sizes="100vw" />
+          </div>
+
+          <div class="slider-item">
+            <img src="./assets/slides/slide3.png" alt="image" id="slider" srcset="./assets/slides/slide3_sm.png  800w,
+                                            ./assets/slides/slide3.png     1024w,
+                                            ./assets/slides/slide3@2x.png  2048w" sizes="100vw" />
+          </div>
         </div>
       </div>
     </section>
@@ -197,13 +313,41 @@
   <script src="/scripts/main.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tiny-slider/2.9.2/min/tiny-slider.js"></script>
   <script>
-    var slider = tns({
+    // var slider = tns({
+    //   container: '.my-slider',
+    //   loop: true,
+    //   items: 1,
+    //   slideBy: 'page',
+    //   nav: false,
+    //   autoplay: true,
+    //   speed: 400,
+    //   autoplayButtonOutput: false,
+    //   mouseDrag: true,
+    //   lazyload: true,
+    //   controlsContainer: "#customize-controls",
+    // });
+    const slider = tns({
       container: '.my-slider',
+      loop: true,
       items: 1,
       slideBy: 'page',
+      nav: false,
       autoplay: true,
-      autoplayHoverPause: true,
-      mouseDrag: true
+      speed: 400,
+      autoplayButtonOutput: false,
+      mouseDrag: true,
+      lazyload: true,
+      controlsContainer: "#customize-controls",
+      // responsive: {
+      //   640: {
+      //     items: 2,
+      //   },
+
+      //   768: {
+      //     items: 3,
+      //   }
+      // }
+
     });
   </script>
 </body>
