@@ -169,62 +169,6 @@ section.main > header > p {
   margin-top: 14px;
 }
 
-/* section.main > .my-slider******************************************************************* */
-/* .tns-outer{
-  position: relative;
-}
-.tns-slider{
-  width: 100%;
-}
-.tns-visually-hidden{
-  display: none !important;
-}
-.tns-controls {
-  background: #000;
-  z-index: 100000;
-}
-.tns-controls > button:first-of-type {
-  position: absolute;
-  bottom: 50%;
-  left: 0;
-  color: rgb(211, 34, 34);
-  z-index: 10;
-}
-.tns-controls > button:last-of-type {
-  position: absolute;
-  bottom: 50%;
-  color: rgb(211, 34, 34);
-  right: 0;
-  z-index: 10;
-}
-
-.tns-item{
-  width: 100%;
-} */
-/* #slider {
-  height: 65rem;
-}
-.slider::before {
-  content: "";
-  position: absolute;
-  background: #4889f1;
-  height: 2px;
-  width: 7%;
-  left: -7%;
-  top: 80%;
-  border-radius: 2px;
-} */
-/* .slider::after {
-  content: "";
-  position: absolute;
-  background: #4889f1;
-  height: 2px;
-  width: 7%;
-  right: -7%;
-  top: 80%;
-  border-radius: 2px;
-} */
-
 @media (max-width: 1200px) {
   section.main {
     background: url("./assets/bg.svg") no-repeat right 12rem,
@@ -242,9 +186,112 @@ section.main > header > p {
     margin-bottom: 24px;
     width: auto;
   }
-  /* section.main > .slider {
-    margin-top: 51px;
-  } */
+}
+
+/* section.main > .my-slider******************************************************************* */
+
+.slider-container {
+  max-width: 1200px;
+  margin: 8.1rem auto 0 auto;
+  padding: 0 0 30px;
+  overflow: hidden;
+  position: relative;
+}
+
+img {
+  display: inline-block;
+  vertical-align: top;
+  max-width: 100%;
+}
+
+.my-slider {
+  position: relative;
+}
+
+.slider-item {
+  background: white;
+  padding: 0;
+  position: relative;
+  box-shadow: 0px 1px 30px rgba(0, 0, 0, 0.2);
+}
+
+.slider-item:hover {
+  cursor: pointer;
+}
+
+.controls {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: absolute;
+  left: 0;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 10;
+}
+
+.controls:focus {
+  outline: none;
+}
+
+.controls li:hover {
+  cursor: pointer;
+}
+
+.card {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 200px;
+  color: #333;
+  background: white;
+  border-radius: 5px;
+  padding-bottom: 0.75rem;
+  font-family: sans-serif;
+  overflow: hidden;
+  box-shadow: 2px 2px rgba(black, 0.3);
+  position: relative;
+}
+
+.card img {
+  margin-bottom: 0.25rem;
+}
+
+.card h2 {
+  margin: 0 0 0.25rem;
+}
+
+.card p {
+  margin: 0;
+  padding: 0 0.5rem;
+}
+
+.tns-nav {
+  position: absolute;
+  bottom: 0;
+  right: 50%;
+  transform: translateX(50%);
+  z-index: 100;
+}
+.tns-nav > button {
+  outline: none;
+  border: none;
+  margin: 0 8px;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 0.5rem;
+  padding: 0;
+  background: rgba(72, 137, 241, 0.44);
+}
+
+.tns-nav > button.tns-nav-active {
+  background: #4889f1;
+}
+.tns-inner {
+  background: #000;
 }
 
 /* advantages******************************************************************************* */
