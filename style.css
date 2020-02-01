@@ -8,14 +8,14 @@ html {
 @font-face {
   font-family: HelveticaNeueCyr-Roman;
   src: local("HelveticaNeueCyr-Roman"),
-    url("./assets/fonts/HelveticaNeueCyr-Roman.woff2") format("woff2"),
-    url("./assets/fonts/HelveticaNeueCyr-Roman.woff") format("woff");
+  url("./assets/fonts/HelveticaNeueCyr-Roman.woff2") format("woff2"),
+  url("./assets/fonts/HelveticaNeueCyr-Roman.woff") format("woff");
 }
 @font-face {
   font-family: HelveticaNeueCyr-Bold;
   src: local("HelveticaNeueCyr-Bold"),
-    url("./assets/fonts/HelveticaNeueCyr-Bold.woff2") format("woff2"),
-    url("./assets/fonts/HelveticaNeueCyr-Bold.woff") format("woff");
+  url("./assets/fonts/HelveticaNeueCyr-Bold.woff2") format("woff2"),
+  url("./assets/fonts/HelveticaNeueCyr-Bold.woff") format("woff");
 }
 
 body > header > section,
@@ -189,11 +189,13 @@ section.main > header > p {
 }
 
 /* section.main > .my-slider******************************************************************* */
+  .slider-container {
+    padding: 20px;
+  }
 
 .tns-outer {
   max-width: 1200px;
   margin: 8.1rem auto 0 auto;
-  padding: 0;
   position: relative;
 }
 
@@ -201,10 +203,6 @@ img {
   display: inline-block;
   vertical-align: top;
   max-width: 100%;
-}
-
-.my-slider {
-  position: relative;
 }
 
 .slider-item {
@@ -265,9 +263,6 @@ img {
 .tns-nav > button.tns-nav-active {
   background: #4889f1;
 }
-.slider-container {
-  padding: 30px;
-}
 .tns-outer {
   box-shadow: 0px 1px 30px rgba(0, 0, 0, 0.2);
 }
@@ -282,6 +277,7 @@ img {
   opacity: 0;
   transition: 0.2s;
   padding: 0;
+  color: transparent;
 }
 .tns-outer:hover .tns-controls button {
   opacity: 1;
