@@ -219,7 +219,7 @@ img {
   cursor: pointer;
 }
 
-.controls {
+/* .controls {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -240,7 +240,7 @@ img {
 
 .controls li:hover {
   cursor: pointer;
-}
+} */
 
 .card {
   text-align: center;
@@ -290,8 +290,55 @@ img {
 .tns-nav > button.tns-nav-active {
   background: #4889f1;
 }
-.tns-inner {
-  background: #000;
+
+.tns-outer .tns-controls button {
+  position: absolute;
+  z-index: 10;
+  border: none;
+  height: 100%;
+  width: 6%;
+  padding: 0 0 3rem;
+  opacity: 0;
+  transition: 0.2s;
+}
+.tns-outer:hover .tns-controls button {
+  opacity: 1;
+}
+.tns-controls button:first-of-type {
+  background: content-box linear-gradient(to left, #4889f100, #4889f155);
+}
+.tns-controls button:last-of-type {
+  right: 0;
+  background: content-box linear-gradient(to right, #4889f100, #4889f155);
+}
+.tns-controls button::after {
+  content: "";
+  display: block;
+  position: absolute;
+  border-right: 4px solid #4889f1;
+  border-bottom: 4px solid #4889f1;
+  height: 16px;
+  width: 16px;
+  top: calc(50% - 2rem);
+  transition: 0.2s;
+}
+.tns-controls button:hover::after {
+  border-right: 4px solid #213f6d;
+  border-bottom: 4px solid #213f6d;
+}
+.tns-controls button:first-of-type::after {
+  left: 20%;
+  -moz-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+.tns-controls button:last-of-type::after {
+  right: 20%;
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 /* advantages******************************************************************************* */
