@@ -322,13 +322,21 @@ img {
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
+@media (max-width: 1023px) {
+  .tns-nav {
+    display: none;
+  }
+}
 
 /* advantages******************************************************************************* */
 .advantages header {
-  padding: 9.5rem 10% 0;
+  padding: 15rem 10% 0;
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
+}
+.advantages.second header {
+  padding: 9.5rem 10% 4.7rem;
 }
 .advantages header h2 {
   font-size: 2.8rem;
