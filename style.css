@@ -127,7 +127,7 @@ body > header > section#showOnScroll > p {
   }
   body > header .try-free-btn {
     font-size: 1rem;
-    padding: 0.6rem 0.9rem;
+    padding: 0 0.9rem;
     height: 3rem;
   }
   #showOnScroll > .try-free-btn {
@@ -512,12 +512,12 @@ a:hover + svg {
   border: 2px solid #4889f1;
   border-radius: 2.1rem;
   white-space: nowrap;
-  font: normal 600 1.8rem/1.6rem HelveticaNeueCyr-Roman;
+  font: normal 600 1.8rem HelveticaNeueCyr-Roman;
   letter-spacing: 0.75px;
   text-transform: uppercase;
   text-decoration: none;
   color: #4889f1;
-  padding: 1.3rem 1.6rem;
+  padding: 0 1.6rem;
   height: 3.6rem;
   display: flex;
   justify-content: flex-start;
@@ -535,6 +535,6 @@ a:hover + svg {
 }
 @media (max-width: 700px) {
   .try-free-btn {
-    font: normal 600 1.4rem/1.6rem HelveticaNeueCyr-Roman;
+    font: normal 600 1.4rem HelveticaNeueCyr-Roman;
   }
 }
