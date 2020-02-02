@@ -148,7 +148,7 @@ section.main {
 }
 section.main > header > h1,
 section.main > header > p {
-  width: 466px;
+  max-width: 466px;
 }
 h1 {
   font-family: HelveticaNeueCyr-Bold, sans-serif;
@@ -165,7 +165,7 @@ section.main > header > p {
   line-height: 3rem;
   letter-spacing: 0.75px;
   color: #9a99a2;
-  width: 361px;
+  max-width: 361px;
   margin-top: 14px;
 }
 
@@ -277,7 +277,7 @@ img {
   opacity: 0;
   transition: 0.2s;
   padding: 0;
-  color: transparent;
+  outline: none;
 }
 .tns-outer:hover .tns-controls button {
   opacity: 1;
