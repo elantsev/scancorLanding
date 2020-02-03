@@ -1,3 +1,4 @@
+// change header*****************************************************
 window.onscroll = function () { scrollFunction() };
 
 function scrollFunction () {
@@ -12,3 +13,30 @@ function scrollFunction () {
         document.querySelector('body>header').style.borderBottom = "none"
     }
 }
+
+
+// login*************************************************************
+
+const loginWrapper = document.querySelector('.login-wrapper')
+// const loginWrapper = document.getElementsByClassName('login-wrapper')[0]
+console.log(loginWrapper);
+
+
+document.addEventListener('click', (e) => {
+    console.log(e.target.className);
+    if (e.target.className === 'enter-btn') {
+        e.preventDefault()
+        loginWrapper.style.display = 'flex'
+    }
+    if (e.target.className === 'login-wrapper' || e.target.className === 'close') {
+        loginWrapper.style.display = 'none'
+    }
+    // if (e.target.className === 'submit') {
+    //     const email = document.getElementById('email')
+    //     const password = document.getElementById('password')
+
+    //     //request to server
+    // }
+
+})
+

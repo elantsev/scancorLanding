@@ -24,30 +24,29 @@
   <style>
 
   </style>
-
-
 </head>
 
 <body>
-  <section class="login">
-    <button class="close">+</button>
-    <div class="socials">
-      <svg height='35' width='35'>
-        <use xlink:href="./assets/icons/icons.svg#wordpress"></use>
-      </svg>
-      <svg height='35' width='35'>
-        <use xlink:href="./assets/icons/icons.svg#google"></use>
-      </svg>
-    </div>
-
-    <form action="" method="post">
-      <input type="email" class="email" placeholder="ivanono@mailbox.ru" name="" id="">
-      <input type="password" class="password" placeholder="*****" name="" id="">
-      <input type="submit" class="submit" value="войти" name="" id="">
-      <input type="button" class="forgot-password" value="Забыли пароль?" name="" id="">
-    </form>
-    <p> Для регистрации просто войдите через Wordpress или Gmail или введите в форме свою почту и желаемый пароль</p>
-  </section>
+  <div class="login-wrapper">
+    <section class="login" id="login">
+      <button class="close">+</button>
+      <div class="socials">
+        <svg height='35' width='35'>
+          <use xlink:href="./assets/icons/icons.svg#wordpress"></use>
+        </svg>
+        <svg height='35' width='35'>
+          <use xlink:href="./assets/icons/icons.svg#google"></use>
+        </svg>
+      </div>
+      <form action="" method="post">
+        <input type="email" required class="email" placeholder="ivanono@mailbox.ru" name="" id="email">
+        <input type="password" required class="password" placeholder="*****" minlength='4' name="" id="password">
+        <input type="submit" class="submit" value="войти" name="" id="submit">
+        <input type="button" class="forgot-password" value="Забыли пароль?" name="" id="forgot-password">
+      </form>
+      <p> Для регистрации просто войдите через Wordpress или Gmail или введите в форме свою почту и желаемый пароль</p>
+    </section>
+  </div>
 
   <header>
     <section id="hideOnScroll">

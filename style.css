@@ -508,7 +508,16 @@ a:hover + svg {
 }
 
 /* .login************************************************************** */
-
+.login-wrapper{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  z-index: 100;
+  background: rgba(0, 0, 0, 0.2);
+  display: none;
+  transition: 2.5s;
+}
 .login {
   position: relative;
   max-width: 673px;
@@ -518,6 +527,7 @@ a:hover + svg {
   border-radius: 5px;
   margin: auto;
   padding: 9.6rem 9.6rem 8.7rem;
+
 }
 .close {
   position: absolute;
@@ -578,7 +588,7 @@ a:hover + svg {
   width: 10rem;
 }
 .login .forgot-password {
-  font-size: 14px;
+  font-size: 20px;
   line-height: 16px;
   text-align: center;
   letter-spacing: 0.75px;
