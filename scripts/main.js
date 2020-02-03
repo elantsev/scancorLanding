@@ -31,12 +31,29 @@ document.addEventListener('click', (e) => {
     if (e.target.className === 'login-wrapper' || e.target.className === 'close') {
         loginWrapper.style.display = 'none'
     }
-    // if (e.target.className === 'submit') {
-    //     const email = document.getElementById('email')
-    //     const password = document.getElementById('password')
-
-    //     //request to server
-    // }
+    if (e.target.className === 'submit') {
+        const email = document.getElementById('email')
+        const password = document.getElementById('password')
+        sendData({ email, password }).then(()=>{e.preventDefault()})
+    }
 
 })
 
+
+async function sendData ({ email, password }) {
+    const url = 'https://dsfg'
+
+    try {
+        const response = await fetch(url, {
+            method: 'POST',
+            body: JSON.stringify({ email, password }), // данные могут быть 'строкой' или {объектом}!
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        });
+        const json = await response.json();
+        console.log('Успех:', JSON.stringify(json));
+    } catch (error) {
+        console.error('Ошибка:', error);
+    }
+}
